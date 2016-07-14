@@ -115,6 +115,7 @@ var getInspiration = function (tag) {
             $('.search-results').html(searchResults);
             $.each(result.items, function (index, item) {
                 var inspiration = showInspiration(item);
+                $('.results').append(inspiration);
             });
         })
         .fail(function (jqXHR, error) {
